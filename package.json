@@ -1,0 +1,19 @@
+{
+  "name": "tix-connect-flows",
+  "version": "0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "server": "node src/server.js",
+    "forward-webhooks": "export $(cat .env | xargs) && stripe listen --forward-to localhost:3000/webhook"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "stripe": "^8.51.0",
+    "urijs": "^1.19.2"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
