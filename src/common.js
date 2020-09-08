@@ -9,7 +9,9 @@ const keypress = async () => {
   );
 };
 
+const delay = (t) => new Promise((resolve) => setTimeout(resolve, t));
+
 const prettyPrint = (response) =>
   console.log(JSON.stringify(response, null, 2));
 
-module.exports = { keypress, prettyPrint };
+module.exports = { keypress, prettyPrint, delay };

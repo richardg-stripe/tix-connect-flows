@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "main": "server.js",
   "scripts": {
-    "server": "node src/server.js",
-    "forward-webhooks": "export $(cat .env | xargs) && stripe listen --forward-to localhost:3000/webhook"
+    "setupConnectAccounts": "node src/setupConnectAccounts.js",
+    "payments": "node src/payments.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
